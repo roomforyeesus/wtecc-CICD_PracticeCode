@@ -41,6 +41,4 @@ jobs:
         fail_ci_if_error: true
         files: ./coverage1.xml
         flags: unittests
-        name: codecov-umbrella
         verbose: true
-
