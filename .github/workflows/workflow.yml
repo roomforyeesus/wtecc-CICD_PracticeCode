@@ -23,9 +23,10 @@ jobs:
           flake8 service --count --max-complexity=10 --max-line-length=127 --statistics
     - name: Run unit tests with nose
       run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
-    - name: Upload code coverage
-    - uses: actions/checkout@master
-    - uses: codecov/codecov-action@v3
+    - name: checkout-master
+      uses: actions/checkout@master
+    - name: codecovupload
+      uses: codecov/codecov-action@v3
       with:
         token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
         files: ./coverage1.xml,./coverage2.xml # optional
