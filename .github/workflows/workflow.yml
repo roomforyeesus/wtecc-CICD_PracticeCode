@@ -25,3 +25,8 @@ jobs:
       run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
+      with:
+        	flags: unittests
+          fail_ci_if_error:true
+          verbose:true
+          version:"v0.1.13"
